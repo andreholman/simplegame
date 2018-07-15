@@ -1,0 +1,26 @@
+body {
+	margin: 0;
+	background: black;
+	cursor: none;
+	overflow: hidden;
+	font-family: "Raleway"
+}
+
+canvas {
+	z-index: 1;
+}
+
+#endgame {
+	position:fixed;
+	top:0;
+	width: 100%;
+	z-index: 2;
+	color: gold;
+	font-weight: 900;
+	font-size: 120px;
+	text-align: center;
+}
+
+#endgame a {
+	color: #EEE;
+}
