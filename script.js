@@ -3,7 +3,7 @@ var canvas = document.querySelector('canvas')
 var c = canvas.getContext('2d')
 
 // ______
-var difficulty = 1
+var difficulty = 0.9
 //\\—————
 
 
@@ -83,7 +83,7 @@ function init() {
 }
 
 function newObstacle() {
-	objects.push(new Spawn(randomIntFromRange(-50, innerWidth+50), -100, Math.random()-0.5, 10, randomIntFromRange(18, 50), colors[Math.floor(Math.random() * 9)]))
+    objects.push(new Spawn(randomIntFromRange(-50, innerWidth+50), -100, Math.random()-0.5, 10, randomIntFromRange(18, 50), colors[Math.floor(Math.random() * 9)]))
 }
 
 var trail = 0.5
@@ -101,7 +101,7 @@ function animate() {
             objects.splice(object, 1);
         }
         if (distance(object.x, object.y, mouse.x, mouse.y) <= 20 + object.radius) {
-            document.getElementById("endgame").innerHTML = "Game over! <a href='file:///Users/holman/Desktop/Webapps/Collab/index.html'>REPLAY</a>";
+            document.getElementById("endgame").innerHTML = "Game over! <a href='https://andreholman.github.io/simplegame'>REPLAY</a>";
             document.getElementById("main").style.cursor = "crosshair";
             clearInterval(timer)
         }
